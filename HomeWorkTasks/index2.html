@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="buttons">Нажмите клавиши R или G или B</p>
+
+    <div class="container">
+        <p id="output">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis labore nostrum recusandae.</p>
+        <p id="output">Odio quaerat repudiandae provident reiciendis enim illo consectetur.</p>
+        <p id="output">Sequi reiciendis consequatur, ad nostrum earum ullam fugit corrupti nesciunt.</p>
+    </div>
+
+    <style>
+
+        body {
+            background-color: white;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            margin: 10px;
+            font-size: xx-large;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+    </style>
+    
+    <script>
+
+        window.onload = function () {
+
+            let change = document.querySelector(".container");
+            document.addEventListener("keydown", (e) => {
+                switch(e.code) {
+                    case "KeyR":
+                        change.style.color = "red";
+                        break;
+                    case "KeyG":
+                        change.style.color = "green";
+                        break;
+                    case "KeyB":
+                        change.style.color = "blue";
+                        break;
+                }
+            });
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <p class="text">Получить скидку 30%</p>
+        <button>Получить</button>
+    </div>
+
+    <style>
+
+        body {
+            background-color: #4a536b;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 300px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+
+        .container {
+            border-radius: 10px;
+            background-color: #aed6dc;
+            color: white;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0px 1px 20px #ff9a8d;
+            position: absolute;
+            transition: 0.09s;
+        }
+
+        .text {
+            font-size: medium;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        button {
+            margin-bottom: 10px;
+            background-color: #ff9a8d;
+            color: #fff1e1;
+            border: white;
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+        }
+
+    </style>
+    
+    <script>
+
+            let div = document.querySelector(".container");
+
+            function random(min, max){
+                let random = min + Math.random() * ((max - min) * 5);
+                return Math.floor(random);
+            }
+
+            div.onmousemove = function () {
+                div.style.transform = "translateX(" + random(0, 100) + "px)" + "translateY(" + random(0, 100) + "px)";
+            }
+               
+            
+        
+
+        
+
+    </script>
+
+</body>
+</html>

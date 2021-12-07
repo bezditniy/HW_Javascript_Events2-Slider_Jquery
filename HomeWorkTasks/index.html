@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <textarea class="textRedactor" placeholder="Enter any text"></textarea>
+        <button class="saveBtn">Save</button>
+    </div>
+
+    <style>
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .textRedactor {
+            width: 40%;
+            height: 400px;
+            resize: none;
+        }
+
+        .saveBtn {
+            height: 30px;
+            width: 100px;
+            border-radius: 5px;
+        }
+
+    </style>
+    
+    <script>
+
+        let text = false;
+        
+        document.querySelector("button").addEventListener("click", (ev) => {
+            text = true;
+            alert("Saved")
+            ev.preventDefault();
+        });
+
+        window.onbeforeunload = () => {
+                if (text == false) {
+                    return confirm("Changes you made may not be saved");
+                }
+            }
+
+    </script>
+
+</body>
+</html>
